@@ -8,7 +8,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import News from './components/News'
 import Team from './components/Team'
-
+// hi
 function App() {
   return (
     <>
