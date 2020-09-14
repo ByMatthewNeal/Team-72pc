@@ -3,18 +3,18 @@ const News = require('../models/news');
 let news = require('../models/news.model')
 
 router.route('/').get((req,res) => {
-    Event.find()
+    News.find()
         .then(news => res.json(exercises))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/add').post((req, res) => {
     const title = req.body.title;
-    const date = Date.parse(req.body.date);
+    const date = date.parse(req.body.date);
     const picture = req.body.picture;
     const story = req.body.story;
 
-    const newNews = new Event({
+    const newNews = new News({
         title,
         date,
         picture,

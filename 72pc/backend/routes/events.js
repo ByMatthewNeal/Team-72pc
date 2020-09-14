@@ -1,20 +1,21 @@
 const router = require('express').Router();
+const Events = require('../models/news');
 let events = require('../models/events.model')
 
 router.route('/').get((req,res) => {
-    Event.find()
-        .then(events => res.json(exercises))
+    Events.find()
+        .then(events => res.json(events))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/add').post((req, res) => {
     const title = req.body.title;
-    const date = Date.parse(req.body.date);
+    const date = date.parse(req.body.date);
     const location = req.body.location;
     const picture = req.body.picture;
     const details = req.body.details;
 
-    const newEvent = new Event({
+    const newEvent = new Events ({
         title,
         date,
         location,
