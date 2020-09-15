@@ -16,7 +16,7 @@ const newsSchema = new Schema({
     },
 }, {
     picture: {
-        type: Image,
+        type: String,
         required: true,
         unique: true,
     },
@@ -28,6 +28,6 @@ const newsSchema = new Schema({
     }
 });
 
-const News = mongoose.mondel('News', newsSchema);
+const News = mongoose.model('News', newsSchema);
 
 module.exports = News;

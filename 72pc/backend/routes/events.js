@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const Events = require('../models/news');
-let events = require('../models/events.model')
+const Events = require('../models/events');
 
 router.route('/').get((req,res) => {
     Events.find()
@@ -10,7 +9,7 @@ router.route('/').get((req,res) => {
 
 router.route('/add').post((req, res) => {
     const title = req.body.title;
-    const date = date.parse(req.body.date);
+    const date = Date.parse(req.body.date);
     const location = req.body.location;
     const picture = req.body.picture;
     const details = req.body.details;
@@ -40,7 +39,7 @@ router.route('/:id').delete((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/update/:id').post((req,res) => {
+router.route('/:id').put((req,res) => {
     Events.findById(req.params.id)
     .then(events => {
         events.title = req.body.title;
@@ -49,7 +48,7 @@ router.route('/update/:id').post((req,res) => {
         events.picture = req.body.picture;
         events.details = req.body.details;
 
-        news.save()
+        events.save()
         .then(() => res.json('Event Updated!'))
         .catch(err => res.status(400).json('Error: ' + err));
     })

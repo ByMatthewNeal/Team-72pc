@@ -22,7 +22,7 @@ const eventsSchema = new Schema({
     },
 }, {
     picture: {
-        type: Image,
+        type: String,
         requred: true,
         unique: true,
     },
@@ -34,6 +34,6 @@ const eventsSchema = new Schema({
     }
 });
 
-const Events = mongoose.mondel('Events', eventsSchema);
+const Events = mongoose.model('Events', eventsSchema);
 
 module.exports = Events;

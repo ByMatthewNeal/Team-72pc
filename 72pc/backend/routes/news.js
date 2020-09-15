@@ -1,16 +1,15 @@
 const router = require('express').Router();
 const News = require('../models/news');
-let news = require('../models/news.model')
 
 router.route('/').get((req,res) => {
     News.find()
-        .then(news => res.json(exercises))
+        .then(news => res.json(news))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/add').post((req, res) => {
     const title = req.body.title;
-    const date = date.parse(req.body.date);
+    const date = Date.parse(req.body.date);
     const picture = req.body.picture;
     const story = req.body.story;
 
@@ -38,7 +37,7 @@ router.route('/:id').delete((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/update/:id').post((req,res) => {
+router.route('/:id').put((req,res) => {
     News.findById(req.params.id)
     .then(news => {
         news.title = req.body.title;
