@@ -70,30 +70,63 @@ $primaryColor: #242426;
         margin-left: auto;
         margin-right: auto;
     }
-    img {
-        min-height: 500px;
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        top: 8vh;
-        left: 0;
-        z-index: -1;
-    }
+    // img {
+    //     display: block;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     height: 50%;
+    //     width: 50%;
+    //     z-index: -1;
+    // }
     body {
-        // margin-left: 10vw;
-        // margin-right: 10vw;
-        background-color: hotpink;
-        // height: 100%;
-        // width: 100%;
+        padding-top: 1vw;
+        margin-bottom: 8vh;
+    }
+    h1 {
+        color: white;
+        margin-top: 200px;
+        font-size: 50px;
+    }
+    .home-team {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        justify-content: space-evenly;
+        background-color: $primaryColor;
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 90%;
+            border: 1px solid white;
+        }
+    }
+    .home-merch {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        justify-content: space-evenly;
+        background-color: $primaryColor;
+        margin-top: 10px;
+        margin-bottom: 100px;
+        img {
+            height: 400px;
+            width: 300px;
+        }
     }
 }
 
 // -----------------------------------------------------------------------
 
-// .App {
-//     background-image: url("../images/FullLogo.png");
-//     background-color: black;
-// }
+.App {
+    // background-color: black;
+    background-image: url("../images/FullLogo.png");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 800px 300px;
+    background-color: black;
+}
 
 // -----------------------------------------------------------------------
 
