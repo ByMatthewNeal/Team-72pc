@@ -9,7 +9,7 @@ router.route('/').get((req,res) => {
 
 router.route('/add').post((req, res) => {
     const title = req.body.title;
-    const date = Date.parse(req.body.date);
+    const date = Date.parse(req.body.date) || new Date();
     const picture = req.body.picture;
     const story = req.body.story;
 
