@@ -6,28 +6,25 @@ const newsSchema = new Schema({
     title: {
         type: String,
         required: true,
-        unique: true,
         trim: true,
     },
-}, {
+
     date: {
         type: Date,
         required: true,
     },
-}, {
+
     picture: {
-        type: Image,
+        type: String,
         required: true,
-        unique: true,
     },
-}, {
+
     story: {
         type: String,
         required: true,
-        unique: true
     }
-});
+ });
 
-const News = mongoose.mondel('News', newsSchema);
+const News = mongoose.model('News', newsSchema);
 
 module.exports = News;
