@@ -14,13 +14,17 @@ function App() {
     <>
     <Router>
       <div className="App">
+        <div className='page-container'>
         <Navbar />
-          <Route path="/" exact component={ Home } />
-          <Route path="/about" component={ About } />
-          <Route path="/events" component={ Events } />
-          <Route path="/news" component={ News } />
-          <Route path="/team" component={ Team } />
+            <div className='content-wrap'>
+            <Route path="/" exact component={ Home } />
+            <Route path="/about" component={ About } />
+            <Route path="/events" component={ Events } />
+            <Route path="/news" component={ News } />
+            <Route path="/team" component={ Team } />
+            </div>
         <Footer />
+        </div>
       </div>
     </Router>
     </>
