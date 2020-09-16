@@ -8,7 +8,10 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import News from './components/News'
 import Team from './components/Team'
-// hi
+import CreateStory from './components/Create-News'
+
+
+
 function App() {
   return (
     <>
@@ -22,6 +25,7 @@ function App() {
             <Route path="/events" component={ Events } />
             <Route path="/news" component={ News } />
             <Route path="/team" component={ Team } />
+            <Route path="/news/new" component={ CreateStory } />
             </div>
         <Footer />
         </div>
