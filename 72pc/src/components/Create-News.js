@@ -20,21 +20,21 @@ export default class CreateStory extends Component {
     }
   }
 
-  componentDidMount() {
-    axios.get('http://localhost:3000/news/')
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            news: response.data.map(newz => newz.title),
-            title: response.data[0].title
-          })
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+  // componentDidMount() {
+  //   axios.get('http://localhost:3000/news/')
+  //     .then(response => {
+  //       if (response.data.length > 0) {
+  //         this.setState({
+  //           news: response.data.map(newz => newz.title),
+  //           title: response.data[0].title
+  //         })
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     })
 
-  }
+  // }
 
   onChangeTitle(e) {
     this.setState({
@@ -73,9 +73,12 @@ export default class CreateStory extends Component {
     console.log(stories);
 
     axios.post('http://localhost:3000/news/add', stories)
-      .then(res => console.log(res.data));
+      .then(res =>  {
+        console.log(res.data)
+        window.location = '/news';
+      });
 
-    window.location = '/news';
+    // window.location = '/news';
   }
 
   render() {
@@ -106,7 +109,7 @@ export default class CreateStory extends Component {
         <div className="form-group"> 
           <label>Date: </label>
           <input  
-            type="text"
+            type="date"
               required
               className="form-control"
               value={this.state.date}

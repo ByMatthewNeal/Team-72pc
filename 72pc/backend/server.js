@@ -10,6 +10,17 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// This will print to server console method that was used ("GET/POST/PUT/DELETE") where and when.
+app.use((req, res, next) => {
+    const url = req.url;
+    const method = req.method;
+    const requestedAt = new Date().toLocaleTimeString();
+    const result = `${method} ${url} ${requestedAt}`;
+    console.log(result);
+    next();
+});
+
+
 const  uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 
