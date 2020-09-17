@@ -1,6 +1,7 @@
 import Axios from 'axios'
 import React from 'react'
 import axios from 'axios'
+import {Link} from "react-router-dom"
 
 class News extends React.Component {
     constructor(props) { 
@@ -32,7 +33,7 @@ class News extends React.Component {
                 {
                   this.state.news.map(article =>(
                     <div>
-                    <p>{article.title}</p>
+                    <Link to ={`/news/${article._id}`}>{article.title}</Link>
                     <p>{article.date}</p>
                     </div>
                   )
