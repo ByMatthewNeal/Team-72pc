@@ -4,7 +4,8 @@ import Media from './Media'
 function About() {
     return(
         <div className='about'>
-           
+            <div className='divider'></div> 
+            <div className='story'>
             <div className='title'>
                 <h1>About 72PC</h1>
                 <Media />
@@ -16,6 +17,7 @@ function About() {
                     RL and Josh decided to try coaching the team of BP, DiDi, and Vanr. This was when we really started to take our current form. 
                     There have been roster shifts, another merge (with Dauntless), and some other small things. But that's how we got started and today we compete in RLCS X as 
                     well as other major tournaments in Rocket League and have a discord community of over 1,000 members.</p>
+            </div>
             </div>
         </div>
     )
