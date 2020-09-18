@@ -8,19 +8,23 @@ import Merch2 from '../images/hoodie.png'
 import Merch3 from '../images/flag.png'
 import logo from '../images/72pc.png'
 import omelette from '../images/Omelette.png'
+import peeps from '../images/peeps.png'
+import rogue from '../images/rogue.png'
+import pc from '../images/HorizontalLogo_White.png'
 
 function Home() {
     return(
         <div className='home'>
             <body>
+                <img src={pc} alt="" className='white'/>
             <img src={Bkg} alt='background' className='banner'></img>
-            <iframe title='72pc vs NRG' width="560" height="315" src="https://www.youtube.com/embed/m1BeWEOwoeU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {/* <iframe title='72pc vs NRG' width="560" height="315" src="https://www.youtube.com/embed/m1BeWEOwoeU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
             <div className='boty'>
                 <div className='events'>
                     <h1>Upcoming Games</h1>
                     <div className='matches'>
                         <div className='match-one'>
-                            <h2>Oct 5 | 7:00pm PST</h2>
+                            <h2>Oct 5 | 7:15pm PST</h2>
                             <h3>Rocket League</h3>
                             <div className='match-imgs'>
                                 <img src={logo} alt=""/>
@@ -28,22 +32,22 @@ function Home() {
                                 <img src={omelette} alt=""/>
                             </div>
                         </div>
-                        <div className='match-one'>
-                            <h2>Oct 5 | 7:00pm PST</h2>
+                        <div className='match-two'>
+                            <h2>Oct 13 | 9:45pm PST</h2>
                             <h3>Rocket League</h3>
                             <div className='match-imgs'>
                                 <img src={logo} alt=""/>
                                 <h4>vs</h4>
-                                <img src={omelette} alt=""/>
+                                <img src={peeps} alt=""/>
                             </div>
                         </div>
-                        <div className='match-one'>
-                            <h2>Oct 5 | 7:00pm PST</h2>
+                        <div className='match-three'>
+                            <h2>Oct 21 | 6:30pm PST</h2>
                             <h3>Rocket League</h3>
                             <div className='match-imgs'>
                                 <img src={logo} alt=""/>
                                 <h4>vs</h4>
-                                <img src={omelette} alt=""/>
+                                <img src={rogue} alt=""/>
                             </div>
                         </div>
                     </div>
