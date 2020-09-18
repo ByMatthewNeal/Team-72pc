@@ -25,10 +25,10 @@ function App() {
                 <Route path="/" exact component={ Home } />
                 <Route path="/about" component={ About } />
                 <Route path="/events" component={ Events } />
+                <Route path="/news/new" component={ CreateStory } />
                 <Route path="/news/:id" component={ Story } /> 
                 <Route exact path="/news" component={ News } /> 
                 <Route path="/team" component={ Team } />
-                <Route path="/news/new" component={ CreateStory } />
               </Switch>
             </div>
         <Footer />
