@@ -20,22 +20,6 @@ export default class CreateStory extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   axios.get('http://localhost:3000/news/')
-  //     .then(response => {
-  //       if (response.data.length > 0) {
-  //         this.setState({
-  //           news: response.data.map(newz => newz.title),
-  //           title: response.data[0].title
-  //         })
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     })
-
-  // }
-
   onChangeTitle(e) {
     this.setState({
       title: e.target.value
