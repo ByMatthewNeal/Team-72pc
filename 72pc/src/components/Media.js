@@ -1,5 +1,6 @@
 import React from 'react'
-import '../styles/navbar.scss'
+import '../styles/app.scss'
+
 import Twitch from '../images/twitch.png'
 import Twitter from '../images/twitter.png'
 import Youtube from '../images/youtube.png'

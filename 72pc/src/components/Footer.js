@@ -1,5 +1,6 @@
 import React from 'react'
 import Media from './Media'
+import '../styles/app.scss'
 
 function Footer() {
     return(

@@ -1,7 +1,8 @@
-// import Axios from 'axios'
 import React from 'react'
 import axios from 'axios'
 import {Link} from "react-router-dom"
+import '../styles/app.scss'
+import '../styles/news.scss'
 
 class News extends React.Component {
     constructor(props) { 
@@ -29,16 +30,18 @@ class News extends React.Component {
     render(){
         return(
             <div className='news'>
-                <h1>News 72PC</h1>
+                <div className='divider'></div>
+                <div className='sect'>
                 {
                   this.state.news.map(article =>(
-                    <div>
-                    <Link to ={`/news/${article._id}`}>{article.title}</Link>
-                    <p>{article.date}</p>
+                    <div className='data'>
+                      <Link to ={`/news/${article._id}`}>{article.title}</Link>
+                      <p>{article.date}</p>
                     </div>
                   )
                   )
                 }
+                </div>
             </div>
         )
     }
