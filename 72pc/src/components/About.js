@@ -1,5 +1,7 @@
 import React from 'react'
 import Media from './Media'
+import '../styles/app.scss'
+import '../styles/about.scss'
 
 function About() {
     return(

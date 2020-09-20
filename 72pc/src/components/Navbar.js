@@ -1,7 +1,6 @@
 import React from 'react'
-import '../styles/navbar.scss';
+import '../styles/app.scss';
 import { Link } from 'react-router-dom';
-// import Logo from '../images/HorizontalLogo_White.png'
 import Media from './Media'
 
 function Navbar() {
