@@ -57,3 +57,33 @@ $secondaryColor:  #FE28A7;
         }
     }
 }
+@media only screen and (max-width: 980px) {
+    .team {
+        background-image: none;
+        background-color: $primaryColor;
+        margin: 0;
+        padding: 0 0 20vh 0;
+    }
+    .margin {
+        margin: 0;
+    }
+    .coach-team {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .roster-team {
+        .starters {
+            margin: 0px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+    .subs {
+        display: flex;
+        flex-direction: column;
+    }
+}

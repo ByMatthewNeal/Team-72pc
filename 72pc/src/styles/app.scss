@@ -157,3 +157,70 @@ $secondaryColor:  #FE28A7;
 }
 
 //------------------------------------------------------------------------
+
+@media only screen and (max-width: 980px) {
+    .navbar {
+      .nav-list {
+          display: flex;
+          flex-direction: column;
+          width: 100vw;
+          li {
+              &:hover {
+                  background: none;
+                  transition: none;
+              }
+          }
+      }
+    }
+    .home {
+        max-width: 100%;
+        .events {
+            .matches {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .news-home {
+            h1 {
+                font-size: 4vh;
+            }
+            p {
+                font-size: 2vh;
+            }
+        }
+        .roster {
+            h1 {
+                display: none;
+            }
+            .home-team {
+                img {
+                    height: 35vh;
+                    width: 65vw;
+                }
+            }
+        }
+        .merch {
+            h1 {
+                font-size: 4vh;
+            }
+            .home-merch {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20vh;
+                // img {
+
+                // }
+            }
+        }
+    }
+    .empty {
+        display: none;
+    }
+    .empty2 {
+        display: none;
+    }
+    .footer {
+        font-size: 70%;
+    }
+  }
